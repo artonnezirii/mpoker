@@ -1,0 +1,391 @@
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $white;
+    font-family: $font-1;
+    background-color: $bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+}
+h2{
+   @include font-96; 
+   font-weight: 700;
+}
+h3{
+    @include font-32;
+}
+h4{
+    @include font-28;
+}
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    margin-bottom: 0;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+.container{
+    max-width: 1820px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.common {
+    &-svg {
+        display: inline-block;
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+    }
+    &-row {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
+        &>div {
+            margin-bottom: var(--bs-gutter-x);
+        }
+    }
+    &-padding {
+        --padding-y: 120px;
+        --padding-x: 0;
+        padding: var(--padding-y) var(--padding-x);
+        @include xl {
+            --padding-y: 100px;
+        }
+        @include lg {
+            --padding-y: 100px;
+        }
+        @include md {
+            --padding-y: 80px;
+        }
+        @include sm {
+            --padding-y: 60px;
+        }
+        &-top {
+            padding-top: var(--padding-y);
+        }
+    }
+    &-title {
+        margin-bottom: 60px;
+        @media (min-width: 1440px) {
+            padding: 0 4%;
+        }
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include font-96;
+        }
+        & p {
+            @include font-20;
+        }
+    }
+}
+
+.boxed-btn{
+    border-radius: 12px;
+    background: var(--btn, radial-gradient(100% 47.77% at 50.28% 0%, #DE823E 0%, #CB2F2F 100%));
+    box-shadow: 0px 15px 25px 0px rgba(82, 0, 0, 0.25);
+    padding: 14px 31px;
+    display: inline-block;
+    color:$white;
+    @include font-18;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    @include transition;
+}
+.boxed-btn.white-bg{
+    border-radius: 12px;
+    background: $white;
+    box-shadow: 0px 15px 25px 0px rgba(82, 0, 0, 0.11);
+    color: #48C00E;
+    @include font-20;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 18px 40px;
+    display: inline-block;
+    @include sm{
+        padding: 15px 30px;
+    }
+}
+// social 
+.social {
+    margin-bottom: 22px;
+    display: block;
+    margin-top: 20px;
+    &-link {
+        --width: 43px;
+        width: var(--width);
+        height: var(--width);
+        @include sm {
+            --width: 38px;
+            & svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
+#root{
+    overflow:hidden;
+}
+.swiper-wrapper{
+    align-items: center;
+}
+
+.navigation{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+.custom-prev, .custom-next, .slick-prev, .slick-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    font-size: 24px !important;
+    color: $white !important;
+    width: 52px !important;
+    height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 5px !important;
+    @include transition;
+    font-size: 20px !important;
+    border:1px solid transparent !important;
+    @include mmd{
+        top: 0;
+        width: 40px;
+        height: 40px;
+    }
+    svg{
+        font-size: 27px;
+    }
+}
+.slick-prev, .slick-next{    
+    font-size: 10px !important;
+    width: 50px !important;
+    border: 1px solid #fff !important;
+    padding: 10px !important;
+}
+.slick-prev{    
+    border: 1px solid transparent !important;
+}
+.slick-prev:hover{    
+    border: 1px solid #fff !important;
+}
+.custom-prev:hover, .custom-next:hover {  
+    @include transition;
+    border:1px solid $white !important;
+}
+.custom-prev, .slick-prev {
+  right: 70px !important;
+  left: auto;
+}
+
+.custom-next {
+  right: 10px;
+  border:1px solid $white !important;
+}
+
+
+
+a{
+    cursor: pointer;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: -40px !important;
+    right: 0px !important;
+}
+.slick-prev {
+    right: 70px !important;
+    left: auto !important;
+}
+.slick-slide>div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include sm{
+        gap: 10px;
+    }
+}
+.slider-cards{
+    h3{
+        margin-bottom: 20px;
+        margin-left: 15px;
+    }
+    .slick-track{
+        display: flex;
+        gap: 15px;
+        @include sm{
+            gap: 10px;
+        }
+    }
+    .activeplay{
+        position: relative;
+        z-index: 1;
+        border-radius: 20px;
+        @include sm{
+            height: 200px;
+            margin-bottom: 20px !important;
+        }
+        @include ssm{
+            height: 152px;
+        }
+        .activeplay{
+            position: relative;
+        }
+        figure{            
+            border-radius: 20px;
+            height: 311px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            @include lg{
+                height: 250px;
+            }
+            @include mmd{
+                height: 220px;
+                border-radius: 20px;
+            }
+            @include sm{
+                height: 100%;
+                border-radius: 20px;
+            }
+            img{
+                border-radius: 20px;
+            }
+            img{
+                border-radius: 20px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                @include sm{                    
+                    border-radius: 12px;
+                }
+            }
+            
+        }
+        .play{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+            width: 55px;
+            height: 55px;
+            opacity: 0;
+            visibility: hidden;
+            @include sm{
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .live{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border-radius: 18.181px;
+            background: #D70022;
+            padding: 6px 12px;
+            z-index: 2;
+            text-transform: uppercase;
+            line-height: 1.2;
+            @include sm{
+                padding: 6px 8px;
+                top: 10px;
+                right: 10px;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        &.activeplay::after{
+           position: absolute;
+           content: "";
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           height: 100%;
+           z-index: 2;
+            background: #000;
+            border-radius: 20px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+        
+        &.activeplay:hover::after{
+            opacity: 0.7;
+            visibility: visible;
+        }
+        &:hover .play{
+                opacity: 1;
+                visibility: visible;
+        }
+        .play:hover{
+                opacity: 0.7;
+                visibility: visible;
+        }
+    }
+}

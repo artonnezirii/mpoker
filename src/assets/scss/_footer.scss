@@ -1,0 +1,123 @@
+.footer{
+    background: #1A1B1F;
+    padding-top: 38px;
+    padding-bottom: 36px;
+    @include sm{
+        padding-top: 20px;
+    }
+    &-content{
+       @include sm{
+        flex-direction: column-reverse;
+       }
+    }
+    &-menus{
+        flex-grow: 1;
+        padding-right: 100px;
+        @include md{
+            padding-right: 30px;
+        }
+        @include lg{
+            padding-right: 50px;
+        }
+        @include sm{
+            gap: 30px !important;
+            padding-right: 0;
+        }
+        .menu-box{
+           @include sm{
+            flex-basis: auto;
+           }
+           @include ssm{
+            flex-basis: 40%;
+           }
+        }
+        li{
+            a{
+                color: $white;
+                font-family: $font-2;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 20px;
+                display: inline-block;
+                @include transition;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+        h5{
+            color: var(--white, #FFF);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            display: block;
+            margin-bottom: 20px;
+
+        }
+    }
+    &-right{
+        max-width: 410px;
+        @include sm{
+            text-align: center;
+            margin-inline: auto;
+        }
+        .logo{
+            margin-top: 100px;
+            margin-bottom: 90px;
+            display: block;
+            text-align: end;
+            margin-right: 5px;
+            @include mmd{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }    
+        P{
+            color: #6B7A86;
+            font-family: $font-2;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            max-width: 380px;
+           @include sm{
+                margin-bottom: 15px;
+                font-size: 12px;
+           }
+        }
+        .social-list{
+            margin-bottom: 20px;
+            justify-content: end;
+            @include sm{
+                justify-content: center;
+            }
+            a:hover{
+                opacity: .5;
+            }
+        }    
+    }
+    .payment-methods{
+        border-top: 1px solid #292B33;
+        padding-top: 22px;
+        margin-top: 10px;
+        .itemlists{
+            max-width: 270px;
+            margin-inline: auto;
+            gap: 10px;
+            margin-top: 15px;
+            a{
+               img{
+                width: 100%;
+                max-width: 26px;
+                height: 100%;
+               } 
+               &:hover{
+                opacity: .5;
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.provider{
+    padding-block: 80px;
+    @include mmd{
+        padding-block:50px
+    }
+    @include sm{
+        padding-block:15px;
+        padding-top: 10px;
+    }
+    .swiper-slide{
+        border-radius: 13.875px;
+        border: 1.387px solid #242222;
+        background:#1f2129;
+        box-shadow: 0px 0px 34.687px 0px rgba(22, 22, 23, 0.70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        height: 82px;
+        @include sm{
+            padding: 0;
+            height: auto;
+            border: 0;
+        }
+        img{
+            height: 75px;
+            object-fit: contain;
+        }
+    }
+}

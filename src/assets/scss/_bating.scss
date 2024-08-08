@@ -1,0 +1,55 @@
+.bating-content{
+    padding: 88px 95px;
+    background-image: url('../img/batingbg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    border-radius: 18px;
+    padding-top: 60px; 
+    position: relative;
+    z-index: 1;
+    @include sm{
+        background-image: url('../img/bating-rs-bg.jpg');
+    }
+    @include lg{
+        background-size: cover;
+    }
+    @include mmd{
+        background-size: cover;
+        padding: 50px;
+        padding-top: 35px;
+    }
+    @include sm{
+        padding: 25px;
+    }
+    h2{
+        @include sm{
+            font-size: 24px;
+        }
+    }
+    h3{
+        margin-top: -15px;
+        @include sm{
+            font-size: 14px;
+            margin-top: -5px;
+        }
+    }
+    p{
+        max-width: 450px;
+        @include font-20;
+        font-weight: 500;
+        margin-bottom: 30px;
+        display: block;
+        margin-top: 5px;
+        @include sm{
+            margin-bottom: 16px;
+            font-size: 11px;
+            max-width: 160px;
+        }
+        .boxed-btn{
+            @include sm{
+                font-size: 12px;
+            }
+        }
+    }   
+}

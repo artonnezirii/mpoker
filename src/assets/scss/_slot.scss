@@ -1,0 +1,9 @@
+.slots{
+    padding-block: 80px;
+    @include mmd{
+        padding-block:50px
+    }
+    @include sm{
+        padding-block: 30px;
+    }
+}
